@@ -1,0 +1,4 @@
+
+# ignore frontend build & node_modules
+/task_manager-frontend/node_modules/
+/task_manager-frontend/build/
