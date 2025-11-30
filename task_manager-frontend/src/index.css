@@ -1,0 +1,70 @@
+:root{
+  --glass: rgba(255,255,255,0.06);
+  --muted: rgba(255,255,255,0.6);
+}
+
+.lavish-card {
+  border-radius: 15px;
+  width: 367px;
+  overflow: hidden;
+  transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms;
+  will-change: transform, box-shadow;
+}
+.lavish-card:hover { transform: translateY(-8px); box-shadow: 0 22px 48px rgba(4,12,30,0.45); }
+
+.lavish-input:focus-within { box-shadow: 0 6px 24px rgba(11,102,255,0.14); border-radius: 10px; }
+
+.accent-strip {
+  height: 5px;
+  background: linear-gradient(90deg,#6ac7ff,#7ef6d1);
+}
+
+.ellipsis-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ellipsis-2 {
+  height: 5rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;       
+  line-clamp: 3;               
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+
+.ellipsis-2.fallback {
+  display: block;
+  max-height: calc(1.25em * 2); 
+  line-height: 1.25em;
+  overflow: hidden;
+}
+.text-fixed {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+@media (width: 1024px) {
+  .lavish-card{
+    width: 475px;
+  }
+} 
+@media (width: 768px){
+  .lavish-card{
+    width: 347px;
+  }
+}
+@media (width: 425px){
+  .lavish-card{
+    width: 360px;
+  }
+}
+@media (min-width: 300px) and (max-width: 375px){
+  .lavish-card{
+    width: 285px;
+  }
+}
